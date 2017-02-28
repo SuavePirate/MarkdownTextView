@@ -58,6 +58,7 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MarkdownTextView.cs" />
     <Compile Include="MarkdownTextViewRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextUtil.cs" />

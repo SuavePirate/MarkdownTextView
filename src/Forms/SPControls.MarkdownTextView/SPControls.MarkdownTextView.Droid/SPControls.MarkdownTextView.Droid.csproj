@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HtmlTagHandler.cs" />
+    <Compile Include="MarkdownTextView.cs" />
     <Compile Include="MarkdownTextViewRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

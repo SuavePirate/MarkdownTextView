@@ -23,6 +23,15 @@ namespace SPControls.MarkdownTextView.iOS
             }
         }
 
+        protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
+        {
+            base.OnElementChanged(e);
+            if(!string.IsNullOrEmpty(TextView.Markdown))
+            {
+                Control.AttributedText = TextUtil.GetAttributedStringFromHtml(TextView.Markdown.GetHtmlFromMarkdown(true));
+            }
+        }
+
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
