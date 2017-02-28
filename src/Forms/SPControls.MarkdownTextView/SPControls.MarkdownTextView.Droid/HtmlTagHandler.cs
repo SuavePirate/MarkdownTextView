@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Text.Style;
 using Android.Text;
+using Org.Xml.Sax;
 
 namespace SPControls
 {

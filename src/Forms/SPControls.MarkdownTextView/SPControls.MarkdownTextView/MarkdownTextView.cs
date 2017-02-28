@@ -9,6 +9,11 @@ namespace SPControls.Forms
 {
     public class MarkdownTextView : Label
     {
-        public string Markdown { get; set; }
+        public static BindableProperty MarkdownProperty = BindableProperty.Create("Markdown", typeof(string), typeof(MarkdownTextView));
+        public string Markdown
+        {
+            get { return (string)GetValue(MarkdownProperty); }
+            set { SetValue(MarkdownProperty, value); }
+        }
     }
 }
