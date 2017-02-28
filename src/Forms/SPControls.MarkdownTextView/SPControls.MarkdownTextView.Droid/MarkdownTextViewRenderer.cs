@@ -20,11 +20,11 @@ namespace SPControls
 {
     public class MarkdownTextViewRenderer : LabelRenderer
     {
-        public MarkdownTextView TextView
+        public SPControls.Forms.MarkdownTextView TextView
         {
             get
             {
-                return (MarkdownTextView)Element;
+                return (SPControls.Forms.MarkdownTextView)Element;
             }
         }
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
