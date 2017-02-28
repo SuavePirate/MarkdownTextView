@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
+using Android.Text;
 
 namespace SPControls
 {
@@ -19,7 +20,16 @@ namespace SPControls
         {
             try
             {
-                var html = Android.Text.Html.FromHtml(htmlText.ParseCodeTags(), null, new HtmlTagHandler()) as ICharSequence;
+                ICharSequence html;
+                if(Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.N)
+                {
+                    html = Html.FromHtml(htmlText.ParseCodeTags(), FromHtmlOptions.ModeLegacy, null, new HtmlTagHandler()) as ICharSequence;
+                }
+                else
+                {
+                    // handle legacy builds
+                    html = Html.FromHtml(htmlText.ParseCodeTags(), null, new HtmlTagHandler()) as ICharSequence;
+                }
                 // this is required to get rid of the end two "\n" that android adds with Html.FromHtml
                 // see: http://stackoverflow.com/questions/16585557/extra-padding-on-textview-with-html-contents for example
                 while (html.CharAt(html.Length() - 1) == '\n')
