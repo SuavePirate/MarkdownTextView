@@ -17,7 +17,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -138,7 +138,7 @@
       <Name>SPControls.MarkdownTextView.Droid</Name>
     </ProjectReference>
     <ProjectReference Include="..\ExampleApp\ExampleApp.csproj">
-      <Project>{ad5550fe-4aa4-4d9a-b69b-c99b8a3e8b39}</Project>
+      <Project>{8DD48410-8798-46B4-B1CF-6A8D9F7C3CA7}</Project>
       <Name>ExampleApp</Name>
     </ProjectReference>
   </ItemGroup>

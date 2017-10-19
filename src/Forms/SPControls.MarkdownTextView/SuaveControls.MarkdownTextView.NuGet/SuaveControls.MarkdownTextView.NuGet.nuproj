@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24DDCBE7-068B-49B5-9720-ADBB9D9DF85F}</ProjectGuid>
+    <Description>A Xamarin.Forms view for rendering Markdown strings intelligently on Android and iOS.</Description>
+    <PackageId>MarkdownTextView.Forms</PackageId>
+    <PackageVersion>2017.10.19</PackageVersion>
+    <Authors>SuavePirate</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SuaveControls.MarkdownTextView.NuGet</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>SuaveControls.MarkdownTextView.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>SuavePirate</Owners>
+    <PackageTags>Xamarin Xamarin.Forms Android iOS Markdown</PackageTags>
+    <Title>Markdown TextView</Title>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <Summary>A Xamarin.Forms Element for rendering markdown strings</Summary>
+    <PackageProjectUrl>https://github.com/SuavePirate/MarkdownTextView</PackageProjectUrl>
+    <PackageIconUrl>https://i1.wp.com/alexdunndev.files.wordpress.com/2017/03/xamagonmarkdown.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/SuavePirate/MarkdownTextView/blob/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SPControls.MarkdownTextView\SPControls.MarkdownTextView.csproj">
+      <Project>{67F9D3A8-F71E-4428-913F-C37AE82CDB24}</Project>
+      <Name>SPControls.MarkdownTextView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPControls.MarkdownTextView.Droid\SPControls.MarkdownTextView.Droid.csproj">
+      <Project>{6DE3988B-D8F7-4AB5-8996-AF1BC4808E47}</Project>
+      <Name>SPControls.MarkdownTextView.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SPControls.MarkdownTextView.iOS\SPControls.MarkdownTextView.iOS.csproj">
+      <Project>{886E4F51-3D0E-407D-95C9-A5C4640A6118}</Project>
+      <Name>SPControls.MarkdownTextView.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.1</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
