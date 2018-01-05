@@ -36,6 +36,4 @@ mdTextView.Markdown = "# this is my *header* tag";
 - Add UWP Support
 
 # Sponsors
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/JvDSfZ39KwEWLYqSChESgBc9/SuavePirate/MarkdownTextView'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/JvDSfZ39KwEWLYqSChESgBc9/SuavePirate/MarkdownTextView.svg' />
-</a>
+
