@@ -13,7 +13,9 @@ https://www.nuget.org/packages/MarkdownTextView.Forms
 
 
 ## Usage
-- Call `MarkdownTextView.Init()` before calling `Xamarin.Forms.Init()`
+- Call `Init` before calling `Xamarin.Forms.Init()`
+- iOS: SPControls.MarkdownTextView.iOS.MarkdownTextView.Init();
+- Android: SPControls.MarkdownTextView.Droid.MarkdownTextView.Init();
 - Use the control
 - In Xaml:
 
